@@ -3,8 +3,11 @@ from bs4 import BeautifulSoup as bs
 import csv
 
 def get_book_page(book_url):
-    # Connexion au serveur de façon générique
+    
+    # Connexion à la page produit choisie
+    #url = 'http://books.toscrape.com/its-only-the-himalayas_981/index.html'
     url = book_url
+    
     response = requests.get(url)
 
     # On parse le contenu HTML obtenu
@@ -50,4 +53,3 @@ def get_book_page(book_url):
          }
     return data
     
-            
